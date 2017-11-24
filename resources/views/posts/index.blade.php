@@ -13,7 +13,7 @@
 
             <strong>Search for user</strong>
 
-            <td> {!! Form::text('title', null, array('placeholder' => 'Title','class' => 'form-control')) !!} </td>
+            <td> {!! Form::text('searchtag', null, array('placeholder' => 'search by user','class' => 'form-control')) !!} </td>
 
         </div>
 

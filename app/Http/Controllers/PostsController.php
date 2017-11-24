@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Posts;
+use App\User;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -105,6 +106,14 @@ class PostsController extends Controller
 
     public function search(Request $request)
     {
-     return $request;
+
+       $uname= $request->searchtag;
+
+        $user = User::where('name',$uname)->get();//->where('username',$uname);
+
+
+        return view('posts.search',compact('user'));//,compact('user'));//->with('success','Post created Successfully');;
+
+
     }
 }
