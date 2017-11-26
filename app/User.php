@@ -31,4 +31,11 @@ public function posts()
     return $this->hasMany('App\Posts');
 }
 
+    public function followers()
+    {
+        return $this->hasMany('App\Followers');
+
+
+    }
+
 }

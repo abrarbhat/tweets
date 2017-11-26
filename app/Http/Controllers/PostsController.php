@@ -114,6 +114,14 @@ class PostsController extends Controller
 
         return view('posts.search',compact('user'));//,compact('user'));//->with('success','Post created Successfully');;
 
+    }
+
+    public function follow(Request $request)
+    {
+        $user= $request->all();
+        return view('posts.search',compact('user'));
+
 
     }
+
 }

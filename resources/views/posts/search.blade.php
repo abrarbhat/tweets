@@ -10,7 +10,7 @@
 
             <div class="pull-left">
 
-                <h2>All Posts</h2>
+                <h2>Showing search results</h2>
 
             </div>
 
@@ -26,12 +26,11 @@
 
             <th>No</th>
 
-            <th>Title</th>
+            <th>Id</th>
 
-            <th>Description</th>
+            <th>Email</th>
 
-            <th>User_id</th>
-            <th width="280px">Action</th>
+            <th>Name</th>
 
         </tr>
         <?php $i =1; ?>
@@ -41,17 +40,20 @@
 
                 <td>{{ $i++ }}</td>
 
-                <td>{{ $item->id }}</td>
+                <td>{{ $item->id}}</td>
 
                 <td>{{ $item->email}}</td>
 
                 <td>{{$item->name}}</td>
 
+                <td>
+
+                    <a class="btn btn-info" href="{{ route('posts.follow',$item->id) }}">Follow Or Unfollow</a>
+
+
             </tr>
 
-        @endforeach
-
-    </table>
+    @endforeach
 
 
 

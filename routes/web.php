@@ -26,5 +26,6 @@ Route::group(['middleware'=>'auth'],function (){
 
     Route::resource('/posts','PostsController');
 Route::post('search',['uses'=>'PostsController@search','as'=>'posts.search']);
+    Route::post('follow',['uses'=>'PostsController@follow','as'=>'posts.follow']);
 
 });
